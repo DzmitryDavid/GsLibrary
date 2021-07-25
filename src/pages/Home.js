@@ -2,8 +2,10 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
+
 import { loadGames } from '../actions/gamesAction';
 import Game from '../components/Game'; 
+
 
 const Home = () => {
   
@@ -24,7 +26,6 @@ const Home = () => {
               name={game.name}
               released={game.released}
               image={game.background_image}
-
           />
           )  
           
