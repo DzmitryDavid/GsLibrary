@@ -1,31 +1,33 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-
+import { smallImage } from '../util';
 
 import { loadDetail } from '../actions/detailAction';
 
-const Game = ({name, id, image, released}) => {
+const Game = ({ name, id, image, released }) => {
+
   const dispatch = useDispatch();
 
   const gameDetailHandler = () => {
     document.body.style.overflow = 'hidden';
-    dispatch(loadDetail(id))   
-  }
-  
-
+    dispatch(loadDetail(id));
+  };
   return (
     <StyledGame onClick={gameDetailHandler}>
       <Link to={`/game/${id}`}>
-        <h3>{name}</h3>
+      <motion.h3>{name}</motion.h3>
         <p>{released}</p>
-        <img src={image} alt={name} />
+        <motion.img
+          src={smallImage(image, 640)}
+          alt={name}
+        />
       </Link>
     </StyledGame>
-  )
-}
+  );
+};
 
 const StyledGame = styled(motion.div)`
   min-height: 30vh;
@@ -35,9 +37,9 @@ const StyledGame = styled(motion.div)`
   overflow: hidden;
   cursor: pointer;
 
-  img { 
+  img {
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     object-fit: cover;
   }
 `;
