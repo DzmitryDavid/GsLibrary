@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { fetchSearch } from '../actions/gamesAction';
 import { useDispatch } from 'react-redux';
+import {fadeIn} from '../animations'
 import logo from '../img/logo.svg';
 
 const Nav = () => {
@@ -10,10 +11,10 @@ const Nav = () => {
   const [textInput, setTextInput] = useState('');
 
   const inputHandler = (e) => {
-
     const text = e.target.value
     setTextInput(text)
   }
+  
   const submitSearch = (e) => {
     e.preventDefault()
     dispatch(fetchSearch(textInput))
@@ -25,7 +26,7 @@ const Nav = () => {
     })
   }
   return (
-    <StyledNav>
+    <StyledNav variants={fadeIn} initial='hidden' animate="show">
       <Logo onClick={clearSearchHandler}>
         <img src={logo} alt="logo" />
         <h1>GS Library</h1>

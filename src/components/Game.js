@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { smallImage } from '../util';
-
+import {popup} from '../animations';
 import { loadDetail } from '../actions/detailAction';
 
 const Game = ({ name, id, image, released }) => {
@@ -16,7 +16,9 @@ const Game = ({ name, id, image, released }) => {
     dispatch(loadDetail(id));
   };
   return (
-    <StyledGame onClick={gameDetailHandler}>
+    <StyledGame
+      variants={popup} initial="hidden" animate="show" 
+      onClick={gameDetailHandler}>
       <Link to={`/game/${id}`}>
       <motion.h3>{name}</motion.h3>
         <p>{released}</p>

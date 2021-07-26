@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { loadGames } from '../actions/gamesAction';
 import Game from '../components/Game';
 import GameDetail from '../components/GameDetail';
+import { fadeIn} from '../animations';
 
 const Home = () => {
   const location = useLocation();
@@ -19,12 +20,12 @@ const Home = () => {
   const { upcoming, newGames, popular, searched } = useSelector((state) => state.games);
 
   return (
-    <GameList>
-          {pathId && <GameDetail/>}
+    <GameList variants={fadeIn} initial="hidden" animate="show">
+          {pathId && <GameDetail />}
         {searched.length ? (
         <div className="searched">
         <h2>Searched Games</h2>
-        <Games>
+        <Games >
           {searched.map((game) => {
             return (
               <Game
@@ -32,7 +33,7 @@ const Home = () => {
                 id={game.id}
                 name={game.name}
                 released={game.released}
-                image={game.background_image}
+                image={game.background_image ? game.background_image : ''}
               />
             );
           })}
