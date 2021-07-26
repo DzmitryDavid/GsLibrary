@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
     *{
@@ -44,9 +44,12 @@ const GlobalStyles = createGlobalStyle`
     img{
         display: block;
     }
-    input{
-        font-weight: bold;
-    font-family: "Montserrat", sans-serif;
+    input {
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+    }
+    button {
+      
     }
 `;
 
