@@ -11,8 +11,10 @@ const Game = ({name, id, image, released}) => {
   const dispatch = useDispatch();
 
   const gameDetailHandler = () => {
+    document.body.style.overflow = 'hidden';
     dispatch(loadDetail(id))   
   }
+  
 
   return (
     <StyledGame onClick={gameDetailHandler}>
@@ -30,6 +32,7 @@ const StyledGame = styled(motion.div)`
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 1rem;
+  overflow: hidden;
   cursor: pointer;
 
   img { 
