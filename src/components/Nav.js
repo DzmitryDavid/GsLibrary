@@ -14,7 +14,7 @@ const Nav = () => {
     const text = e.target.value
     setTextInput(text)
   }
-  
+
   const submitSearch = (e) => {
     e.preventDefault()
     dispatch(fetchSearch(textInput))
@@ -29,7 +29,7 @@ const Nav = () => {
     <StyledNav variants={fadeIn} initial='hidden' animate="show">
       <Logo onClick={clearSearchHandler}>
         <img src={logo} alt="logo" />
-        <h1>GS Library</h1>
+        <h1>iGnite</h1>
       </Logo>
       <form className="search">
         <input 

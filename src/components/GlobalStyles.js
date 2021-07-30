@@ -21,13 +21,13 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         width: 100%;
     }
-    h2{
+    h2 {
         font-size: 3rem;
         font-family: 'Abril Fatface', cursive;
         font-weight: lighter;
-        color: #333;
+        color: #ff7676 ;
     }
-    h3{
+    h3 {
         font-size: 1.3rem;
         color: #333;
         padding: 1.5rem 0rem;
@@ -48,9 +48,7 @@ const GlobalStyles = createGlobalStyle`
       font-weight: bold;
       font-family: "Montserrat", sans-serif;
     }
-    button {
-      
-    }
+    
 `;
 
 export default GlobalStyles;
