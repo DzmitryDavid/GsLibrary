@@ -6,7 +6,7 @@ This application is a kind of library that contains detailed information about g
 ### ▶️ Demo
 
 Here you can find the demo link:
-[GitHub-pages]()
+[GitHub-pages](https://dzmitrydavid.github.io/GsLibrary/)
 
 ### ✨ Features
 
