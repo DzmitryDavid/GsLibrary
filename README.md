@@ -1,13 +1,14 @@
 
 ### 🎯 About 
+
 This application is a kind of library that contains detailed information about games. A search has been implemented with the help of which you can find the game you are interested in, you can also see the most popular games and games that will be released soon. You can also see the rating for each game by version rawg.io the platform on which the game is supported and additional information.
 
-▶️ Demo
+### ▶️ Demo
 
 Here you can find the demo link:
 [GitHub-pages]()
 
-✨ Features
+### ✨ Features
 
 ✔️ Use of React hooks
 ✔️ Use of Redux/Redux-thunk
@@ -17,7 +18,7 @@ Here you can find the demo link:
 ✔️ Use of Styled components
 ✔️ Responsive Web-App
 
-🚀 Technologies
+### 🚀 Technologies
 
 - [React](https://reactjs.org/)
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
